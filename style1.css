@@ -1,0 +1,125 @@
+/* Сброс стилей */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  /* Общие стили */
+  body {
+    font-family: 'Poppins', 'Segoe UI', sans-serif;
+    color: #2d2a26;
+    background-color: #f6f1eb; /* теплый кремовый */
+  }
+  
+  /* Верхняя надпись (логотип) */
+  header {
+    position: fixed;
+    top: 20px;
+    left: 40px;
+    z-index: 10;
+  }
+  
+  .brand {
+    font-size: 1rem;
+    letter-spacing: 2px;
+    color: #a67a5b; /* теплый коричнево-бежевый */
+    text-transform: uppercase;
+    font-weight: 600;
+  }
+  
+  /* Главная секция */
+  .hero {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 120px 10% 60px;
+    min-height: 100vh;
+    background: linear-gradient(120deg, #f6f1eb, #efe7dd, #f5ece4);
+    background-size: 300% 300%;
+    animation: gradientMove 10s ease-in-out infinite alternate;
+  }
+  
+  /* Анимация плавного движения фона */
+  @keyframes gradientMove {
+    0% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+    100% { background-position: 0% 50%; }
+  }
+  
+  /* Контент */
+  .content {
+    max-width: 600px;
+  }
+  
+  h1 {
+    font-size: 3rem;
+    color: #1e1b18; /* темно-шоколадный */
+    margin-bottom: 10px;
+    font-weight: 700;
+  }
+  
+  h2 {
+    font-size: 1.5rem;
+    font-weight: 400;
+    color: #a67a5b;
+    margin-bottom: 25px;
+  }
+  
+  .description {
+    font-size: 1.15rem;
+    color: #3b3631;
+    line-height: 1.7;
+    margin-bottom: 35px;
+  }
+  
+  /* Кнопка */
+  .btn {
+    display: inline-block;
+    background: #c9977c; /* теплый персиково-бежевый */
+    color: white;
+    text-decoration: none;
+    padding: 14px 40px;
+    border-radius: 30px;
+    font-weight: 600;
+    letter-spacing: 0.5px;
+    transition: 0.3s;
+  }
+  
+  .btn:hover {
+    background: #b07d61;
+    transform: translateY(-2px);
+  }
+  
+  /* Фото */
+  .photo img {
+    width: 400px;
+    height: auto;
+    border-radius: 25px;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.15);
+    object-fit: cover;
+  }
+  
+  /* Адаптив */
+  @media (max-width: 900px) {
+    .hero {
+      flex-direction: column-reverse;
+      text-align: center;
+      padding: 100px 20px 40px;
+    }
+  
+    .photo img {
+      width: 320px;
+      margin-bottom: 30px;
+    }
+  
+    h1 {
+      font-size: 2.4rem;
+    }
+  
+    header {
+      left: 20px;
+      top: 15px;
+    }
+  }
+  
